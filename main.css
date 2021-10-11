@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@font-face {
+   font-family: 'MyriadPro-Regular';
+   src: url('fonts/MyriadProRegular.ttf');
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Baskervville', 'MyriadPro-Regular';
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   overflow-x: hidden;
+}
+
+.container {
+   margin: auto;
+   position: relative;
+   padding: 0 4rem 1rem;
+}
+
+.main-header [class$='title'] {
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.main-header__title {
+   padding-top: 2rem;
+   color: #cb9e61;
+   font-size: 2.8rem;
+   letter-spacing: 0.7rem;
+}
+
+.main-header__subtitle {
+   color: #929496;
+   font-size: 1rem;
+   padding-bottom: 1rem;
+}
+
+.nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.nav-list-elements {
+   display: inline-block;
+   list-style-type: none;
+   padding: 0;
+}
+
+.nav-list-element {
+   display: inline-block;
+   padding-right: 2.5rem;
+   font-family: 'Montserrat', 'MyriadPro-Regular';
+   font-size: 0.8rem;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+.nav-list-element a {
+   text-decoration: none;
+   color: #8c8c8c;
+}
+
+.nav-list-element a:hover,
+.nav-list-element a:active {
+   color: #cb9e61;
+}
+
+#li-bold {
+   font-weight: 700;
+}
+
+.pic {
+   text-align: center;
+}
+
+.pic-text {
+   display: inline-block;
+   padding-right: 0.6rem;
+   color: #cb9e61;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+}
+
+.sign-up {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   bottom: 7%;
+   right: 2%;
+}
+
+.btn {
+   margin-top: 0.5rem;
+   padding: 0.2rem 0.5rem;
+   font-family: inherit;
+   color: #ffffff;
+   border: none;
+   background-color: #cb9e61;
+}
+
+.btn:hover {
+   color: #cb9e61;
+   background-color: #ffffff;
+   cursor: pointer;
+}
+
+.pic-image {
+   background-image: url('images/main-pic.png');
+   background-size: cover;
+   width: 100%;
+   height: 90%;
+   position: relative;
+}
