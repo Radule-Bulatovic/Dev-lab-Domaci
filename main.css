@@ -10,27 +10,34 @@
    box-sizing: border-box;
 }
 
+html {
+   font-size: 16px;
+}
+
 body {
    font-family: 'Baskervville', 'MyriadPro-Regular';
-   font-size: 16px;
+   font-size: 1rem;
    margin: 0;
    padding: 0;
    position: relative;
+   width: 100%;
    overflow-x: hidden;
 }
 
 .container {
    margin: auto;
-   position: relative;
    padding: 0 4rem;
+   overflow-x: hidden;
+   position: relative;
 }
 
 .group-1 {
    display: grid;
    height: 100vh;
    grid-template-columns: 1fr;
-   grid-template-rows: 0.8fr 0.4fr 6fr;
+   grid-template-rows: 0.6fr 0.3fr 6fr;
    grid-template-areas: 'header' 'nav' 'group-1-pic';
+   position: relative;
 }
 
 .header {
@@ -46,8 +53,8 @@ body {
 .header__title {
    padding-top: 2rem;
    color: #cb9e61;
-   font-size: 2.8rem;
    letter-spacing: 0.7rem;
+   font-size: 2.8rem;
 }
 
 .header__subtitle {
@@ -94,6 +101,35 @@ body {
    font-weight: 700;
 }
 
+.nav-burger-menu {
+   display: none;
+   cursor: pointer;
+}
+
+.nav-burger-menu div {
+   width: 2.5rem;
+   height: 0.26rem;
+   background-color: #cb9e61;
+   margin: 0.2rem;
+   border-radius: 2rem;
+   transition: all 0.3s ease;
+}
+
+.nav-active {
+   transform: translateX(0%);
+}
+
+@keyframes showLinks {
+   from {
+      opacity: 0;
+      transition: translateX(3rem);
+   }
+   to {
+      opacity: 1;
+      transition: translateX(0rem);
+   }
+}
+
 .group-1__pic {
    grid-area: group-1-pic;
    text-align: center;
@@ -138,6 +174,155 @@ body {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-   width: 100%;
    position: relative;
+   overflow: hidden;
+}
+
+.group-1__pic-image-texture {
+   position: absolute;
+   top: -50%;
+   right: -30%;
+}
+
+.group-2 {
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 0.1fr 6fr 0.1fr;
+   position: relative;
+}
+
+.title {
+   color: #cb9e61;
+   letter-spacing: 0.1rem;
+   text-align: center;
+}
+
+.cards {
+   padding: 0 8rem;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: stretch;
+   row-gap: 2rem;
+}
+
+.card {
+   flex-basis: 30%;
+}
+
+.card-text {
+   margin: 0;
+   background-color: #8c8c8c;
+   color: #ffffff;
+   padding: 0.1rem 0.3rem;
+   font-size: 0.9rem;
+}
+
+[class^='card-img-'] {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   min-height: 230px;
+   position: relative;
+}
+
+.card-arrow {
+   position: absolute;
+   top: 40%;
+   right: 3%;
+}
+
+.card-img-1 {
+   background-image: url(images/pic-1.png);
+}
+.card-img-2 {
+   background-image: url(images/pic-2.png);
+}
+.card-img-3 {
+   background-image: url(images/pic-3.png);
+}
+.card-img-4 {
+   background-image: url(images/pic-4.png);
+}
+.card-img-5 {
+   background-image: url(images/pic-5.png);
+}
+.card-img-6 {
+   background-image: url(images/pic-6.png);
+}
+.card-img-7 {
+   background-image: url(images/pic-7.png);
+}
+.card-img-8 {
+   background-image: url(images/pic-8.png);
+}
+.card-img-9 {
+   background-image: url(images/pic-9.png);
+}
+
+.group-2__bottom-text {
+   color: #8c8c8c;
+   width: 65%;
+   margin: auto;
+   font-size: 0.8rem;
+   padding-top: 1rem;
+   text-align: justify;
+}
+
+.back-photo {
+   position: absolute;
+   z-index: -10;
+   top: -10%;
+   right: -50%;
+}
+
+@media only screen and (max-width: 700px) {
+   html {
+      font-size: 12px;
+   }
+   .nav-list-elements {
+      position: absolute;
+      left: 0;
+      width: 50vw;
+      height: 50vh;
+      top: 20%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index: 100;
+      transform: translateX(-200%);
+      transition: transform 0.6s ease-in;
+      border-radius: 1rem;
+      box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+   }
+
+   .nav-list-element {
+      padding: 0;
+   }
+   .nav-list-elements li:nth-child(6) {
+      display: none;
+   }
+   .nav-burger-menu {
+      display: block;
+   }
+}
+
+.nav-active {
+   transform: translateX(0%);
+}
+
+.toggle .line-1 {
+   transform: rotate(-45deg) translate(-1px, 4px);
+}
+
+.toggle .line-2 {
+   opacity: 0;
+}
+
+.toggle .line-3 {
+   transform: rotate(45deg) translate(-4px, -7px);
 }
