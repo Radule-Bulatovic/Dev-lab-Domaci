@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Baskerville BT Roman';
+    font-style: normal;
+    font-weight: lighter;
+    src: local('Baskerville BT Roman'), url('./fonts/BaskervilleBT.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 3em;
+}
+
+.gr-8 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5em;
+    height: 100vh;
+    color: #CB9E61;
+    font-family: "Baskervville";
+    font-size: 1.3em;
+}
+
+.gr-8-grid {
+    display: grid;
+    grid-template-rows: 1.5fr 8.5fr 4fr 6fr;
+}
+
+.gr-8-img-medium {
+    border: 0.4em white solid;
+    border-radius: 0.5em;
+    margin-left: -10vh;
+    height: 100%;
+    width: auto;
+    max-height: 37vh;
+}
+
+.gr-8-img-small {
+    max-height: 25vh;
+    border-bottom: 0.5em white solid;
+}
+
+.gr-8-yellow-area {
+    background-color: #E0C39C;
+    width: 5vw;
+    height: 100%;
+}
+
+.gr-8-bottom-div {
+    display: inline-flex;
+}
+
+.gr-8-text-div {
+    margin-left: 10vh;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gr-8-title {
+    font-family: "Baskerville BT Roman";
+    font-size: 6em;
+}
+
+.m-1 {
+    margin-left: 1em;
+}
+
+.gr-8-subtitle {
+    font-size: 3em;
+}
