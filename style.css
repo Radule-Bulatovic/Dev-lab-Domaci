@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'BlackJack';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BlackJack'), url('./fonts/blackjack.otf') format('truetype');
+}
+
+:root {
+    --gold: #E0C39C;
+    --dark-gold: #CB9E61;
+    --gray: #8c8c8c;
+    --dark-gray: rgb(47, 79, 79);
+    --white: #FFF;
+}
+
+footer {
+    font-family: 'Baskervville';
+    color: var(--white);
+    background: var(--gray);
+    padding: 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 6em;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer input {
+    margin-bottom: 0.5em;
+}
+
+.align-end {
+    text-align: end;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+footer li {
+    font-family: 'Montserrat';
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: var(--dark-gold);
+    color: var(--white);
+    font-family: inherit;
+    padding: 0.2em;
+    border: 0;
+}
+
+.footer__txt {
+    font-size: 1.2em;
+}
+
+.footer__txt--sm {
+    font-size: 0.6em;
+}
+
+.footer__title {
+    margin: 0 0 0.3em 0;
+    letter-spacing: 0.2em;
+    font-size: 3em;
+}
+
+.fancy-font {
+    font-family: 'BlackJack';
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.footer__slogan {
+    margin: 2em 0 0 0;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__link:hover {
+    color: var(--dark-gray);
+    transition: color ease-in 300ms;
+}
+
+button:hover {
+    color: #cb9e61;
+    font-weight: bold;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: background-color ease-in 300ms;
+}
