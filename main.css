@@ -7,6 +7,11 @@
    src: url('fonts/MyriadProRegular.ttf');
 }
 
+@font-face {
+   font-family: 'BlackJack';
+   src: url('fonts/BLACKJAR.TTF');
+}
+
 * {
    box-sizing: border-box;
 }
@@ -156,7 +161,7 @@ body {
 
 .btn {
    margin-top: 0.5rem;
-   padding: 0.2rem 0.5rem;
+   padding: 0.3rem 0.7rem;
    font-family: inherit;
    color: #ffffff;
    border: none;
@@ -187,7 +192,7 @@ body {
 .group-2 {
    display: grid;
    grid-template-columns: repeat(10, 1fr);
-   grid-template-rows: 1fr 2.2fr 2.2fr 2.2fr 1fr;
+   grid-template-rows: 0.7fr 2.2fr 2.2fr 2.2fr 0.5fr;
    grid-template-areas:
       'title title title title title title title title title title'
       '. . el-1 el-1 el-2 el-2 el-3 el-3 . .'
@@ -291,6 +296,60 @@ body {
    right: -45%;
 }
 
+.group-3 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: 'pic pic text-1' 'pic pic text-2';
+   height: 80vh;
+}
+
+.kyla-pic {
+   grid-area: pic;
+   background-image: url(images/kyle-pic.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
+
+.wrap-text {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   font-size: 1.15rem;
+   padding-left: 3.5rem;
+   width: 80%;
+   color: #cb9e61;
+}
+
+.side-text {
+   grid-area: text-1;
+}
+
+.side-text .title-2 {
+   color: #8c8c8c;
+}
+
+.sweet-home {
+   grid-area: text-2;
+   font-family: 'BlackJack';
+   color: #808183;
+}
+
+.plant {
+   position: absolute;
+   background-image: url(images/plant.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   width: 45%;
+   height: 45%;
+   bottom: -3%;
+   right: -15%;
+}
+
 @media only screen and (max-width: 700px) {
    html {
       font-size: 12px;
@@ -331,6 +390,26 @@ body {
       row-gap: 1.5rem;
    }
 
+   .group-3 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 4fr 1fr 0.5fr;
+      grid-template-areas: 'pic pic' 'text-1 text-1' 'home home';
+      height: 85vh;
+   }
+   .sweet-home {
+      grid-area: home;
+   }
+
+   .wrap-text {
+      padding: 0 0.5rem;
+      width: 100%;
+      align-items: center;
+   }
+
+   .side-text h2 {
+      margin: 0.8rem;
+   }
+
    .nav-list-element {
       padding: 0;
    }
@@ -365,7 +444,12 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%),url("./images/gr-7.png");
+   background-image: linear-gradient(
+         180deg,
+         rgba(255, 255, 255, 1) 0%,
+         rgba(255, 255, 255, 0) 50%
+      ),
+      url('./images/gr-7.png');
    background-size: cover;
    color: #cb9e61;
    padding: 40vh 25vw 30vh 25vw;
@@ -374,14 +458,14 @@ body {
 .gr-7__heading {
    position: absolute;
    text-align: center;
-   top:0;
+   top: 0;
 }
 
 .gr-7__inner-div {
    display: flex;
    flex-direction: column;
    row-gap: 1em;
-   background-color: rgba(255,255,255,0.8);
+   background-color: rgba(255, 255, 255, 0.8);
    padding: 3em;
 }
 
@@ -405,8 +489,8 @@ body {
    flex-direction: row;
    column-gap: 0.5em;
    height: 100vh;
-   color: #CB9E61;
-   font-family: "Baskervville";
+   color: #cb9e61;
+   font-family: 'Baskervville';
    font-size: 1.3em;
 }
 
@@ -436,7 +520,7 @@ body {
 }
 
 .gr-8__yellow-area {
-   background-color: #E0C39C;
+   background-color: #e0c39c;
    width: 5vw;
    height: 100%;
 }
@@ -453,7 +537,7 @@ body {
 }
 
 .gr-8__title {
-   font-family: "Baskerville BT Roman";
+   font-family: 'Baskerville BT Roman';
    font-size: 6em;
    margin: 0;
 }
@@ -468,4 +552,6 @@ body {
 .m-1 > * {
    margin: 0;
 }
-.container > * {margin-bottom: 5em;}
+/* .container > * {
+   margin-bottom: 5em;
+} */
