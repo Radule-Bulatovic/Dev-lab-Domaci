@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
 @font-face {
    font-family: 'MyriadPro-Regular';
@@ -33,7 +34,6 @@ body {
 
 .group-1 {
    display: grid;
-   height: 100vh;
    grid-template-columns: 1fr;
    grid-template-rows: 0.6fr 0.3fr 6fr;
    grid-template-areas: 'header' 'nav' 'group-1-pic';
@@ -180,15 +180,21 @@ body {
 
 .group-1__pic-image-texture {
    position: absolute;
-   top: -50%;
-   right: -30%;
+   top: -10%;
+   right: -20%;
 }
 
 .group-2 {
-   height: 100vh;
    display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 0.1fr 6fr 0.1fr;
+   grid-template-columns: repeat(10, 1fr);
+   grid-template-rows: 1fr 2.2fr 2.2fr 2.2fr 1fr;
+   grid-template-areas:
+      'title title title title title title title title title title'
+      '. . el-1 el-1 el-2 el-2 el-3 el-3 . .'
+      '. . el-4 el-4 el-5 el-5 el-6 el-6 . .'
+      '. . el-7 el-7 el-8 el-8 el-9 el-9 . .'
+      '. . end-text end-text end-text end-text end-text end-text . .';
+   gap: 1.5rem;
    position: relative;
 }
 
@@ -196,86 +202,93 @@ body {
    color: #cb9e61;
    letter-spacing: 0.1rem;
    text-align: center;
+   padding-top: 2rem;
 }
 
-.cards {
-   padding: 0 8rem;
-   margin: auto;
+.el-1 {
+   grid-area: el-1;
+}
+.el-2 {
+   grid-area: el-2;
+}
+.el-3 {
+   grid-area: el-3;
+}
+.el-4 {
+   grid-area: el-4;
+}
+.el-5 {
+   grid-area: el-5;
+}
+.el-6 {
+   grid-area: el-6;
+}
+.el-7 {
+   grid-area: el-7;
+}
+.el-8 {
+   grid-area: el-8;
+}
+.el-9 {
+   grid-area: el-9;
+}
+.title {
+   grid-area: title;
+}
+
+.card-with-text {
    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: stretch;
-   row-gap: 2rem;
-}
-
-.card {
-   flex-basis: 30%;
+   margin: 0;
+   flex-direction: column;
+   height: 100%;
 }
 
 .card-text {
-   margin: 0;
-   background-color: #8c8c8c;
-   color: #ffffff;
+   background-color: gray;
    padding: 0.1rem 0.3rem;
-   font-size: 0.9rem;
+   margin: 0;
+   width: 100%;
+   color: #ffffff;
 }
 
-[class^='card-img-'] {
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   min-height: 230px;
+.card {
+   display: flex;
+   margin: 0;
+   flex-direction: column;
    position: relative;
 }
 
-.card-arrow {
-   position: absolute;
-   top: 40%;
-   right: 3%;
-}
-
-.card-img-1 {
-   background-image: url(images/pic-1.png);
-}
-.card-img-2 {
-   background-image: url(images/pic-2.png);
-}
-.card-img-3 {
-   background-image: url(images/pic-3.png);
-}
-.card-img-4 {
-   background-image: url(images/pic-4.png);
-}
-.card-img-5 {
-   background-image: url(images/pic-5.png);
-}
-.card-img-6 {
-   background-image: url(images/pic-6.png);
-}
-.card-img-7 {
-   background-image: url(images/pic-7.png);
-}
-.card-img-8 {
-   background-image: url(images/pic-8.png);
-}
-.card-img-9 {
-   background-image: url(images/pic-9.png);
+.card img {
+   height: 100%;
+   width: 100%;
 }
 
 .group-2__bottom-text {
+   width: 85%;
+   margin: 0 auto;
+   grid-area: end-text;
+   font-size: 0.55rem;
    color: #8c8c8c;
-   width: 65%;
-   margin: auto;
-   font-size: 0.8rem;
-   padding-top: 1rem;
-   text-align: justify;
+   font-family: 'Barlow', 'MyriadPro-Regular';
+   text-align: center;
+}
+
+.arrow {
+   background-image: url(images/arrow.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 40%;
+   right: 0;
+   width: 20%;
+   height: 20%;
 }
 
 .back-photo {
    position: absolute;
    z-index: -10;
-   top: -10%;
-   right: -50%;
+   top: -5%;
+   right: -45%;
 }
 
 @media only screen and (max-width: 700px) {
@@ -298,6 +311,24 @@ body {
       transition: transform 0.6s ease-in;
       border-radius: 1rem;
       box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+   }
+   .group-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr repeat(10, 0.5fr) 0.1fr;
+      grid-template-areas:
+         'title'
+         'el-1'
+         'el-2'
+         'el-3'
+         'el-4'
+         'el-5'
+         'el-6'
+         'el-7'
+         'el-8'
+         'el-9'
+         'end-text';
+      row-gap: 1.5rem;
    }
 
    .nav-list-element {
