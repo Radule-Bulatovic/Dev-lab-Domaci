@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@font-face {
+   font-family: 'MyriadPro-Regular';
+   src: url('fonts/MyriadProRegular.ttf');
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Baskervville', 'MyriadPro-Regular';
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   overflow-x: hidden;
+}
+
+.container {
+   margin: auto;
+   position: relative;
+   padding: 0 4rem;
+}
+
+.group-1 {
+   display: grid;
+   height: 100vh;
+   grid-template-columns: 1fr;
+   grid-template-rows: 0.8fr 0.4fr 6fr;
+   grid-template-areas: 'header' 'nav' 'group-1-pic';
+}
+
+.header {
+   grid-area: header;
+}
+
+.header [class$='title'] {
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.header__title {
+   padding-top: 2rem;
+   color: #cb9e61;
+   font-size: 2.8rem;
+   letter-spacing: 0.7rem;
+}
+
+.header__subtitle {
+   color: #929496;
+   font-size: 1rem;
+   padding-bottom: 1rem;
+}
+
+.nav {
+   grid-area: nav;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0;
+}
+
+.nav-list-elements {
+   display: inline-block;
+   list-style-type: none;
+   padding: 0;
+}
+
+.nav-list-element {
+   display: inline-block;
+   padding-right: 2.5rem;
+   font-family: 'Montserrat', 'MyriadPro-Regular';
+   font-size: 0.8rem;
+   font-weight: 500;
+   text-transform: uppercase;
+   color: #8c8c8c;
+}
+
+.nav-list-element a {
+   text-decoration: none;
+   color: #8c8c8c;
+}
+
+.nav-list-element a:hover,
+.nav-list-element a:active {
+   color: #cb9e61;
+}
+
+#li-bold {
+   font-weight: 700;
+}
+
+.group-1__pic {
+   grid-area: group-1-pic;
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 0.1fr 2fr;
+}
+
+.group-1__pic-text {
+   display: inline-block;
+   padding-right: 0.6rem;
+   color: #cb9e61;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+}
+
+.sign-up {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   bottom: 7%;
+   right: 2%;
+}
+
+.btn {
+   margin-top: 0.5rem;
+   padding: 0.2rem 0.5rem;
+   font-family: inherit;
+   color: #ffffff;
+   border: none;
+   background-color: #cb9e61;
+}
+
+.btn:hover {
+   color: #cb9e61;
+   background-color: #ffffff;
+   cursor: pointer;
+}
+
+.group-1__pic-image {
+   background-image: url('images/main-pic.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+   position: relative;
+}
+
+
+/* ============================GROUP 7=============================== */
+.gr-7 {
+   margin-top: 10vh;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%),url("./images/gr-7.png");
+   background-size: cover;
+   color: #cb9e61;
+   padding: 40vh 25vw 30vh 25vw;
+}
+
+.gr-7__heading {
+   position: absolute;
+   text-align: center;
+   top:0;
+}
+
+.gr-7__inner-div {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1em;
+   background-color: rgba(255,255,255,0.8);
+   padding: 3em;
+}
+
+.gr-7__button {
+   font-size: 1.2em;
+}
+
+.gr-7__input {
+   font-size: 0.7em;
+   padding: 1em;
+}
+
+.gr-7__text {
+   color: #929496;
+}
+
+/* ============================GROUP 8=============================== */
+
+.gr-8 {
+   display: flex;
+   flex-direction: row;
+   column-gap: 0.5em;
+   height: 100vh;
+   color: #CB9E61;
+   font-family: "Baskervville";
+   font-size: 1.3em;
+}
+
+.gr-8__img-lg {
+   width: 40vw;
+}
+
+.gr-8__grid {
+   display: grid;
+   grid-template-rows: 1.5fr 8.5fr 4fr 6fr;
+}
+
+.gr-8__img-medium {
+   border: 0.4em white solid;
+   border-radius: 0.5em;
+   margin: auto 0 0 -10vh;
+   height: 100%;
+   width: auto;
+   max-height: 37vh;
+}
+
+.gr-8__img-small {
+   max-height: 25vh;
+   margin: 0;
+   height: auto;
+   border-bottom: 0.5em white solid;
+}
+
+.gr-8__yellow-area {
+   background-color: #E0C39C;
+   width: 5vw;
+   height: 100%;
+}
+
+.gr-8__bottom-div {
+   display: inline-flex;
+}
+
+.gr-8__text-div {
+   margin-left: 10vh;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.gr-8__title {
+   font-family: "Baskerville BT Roman";
+   font-size: 6em;
+   margin: 0;
+}
+
+.m-1 {
+   margin-left: 1em;
+}
+
+.gr-8__subtitle {
+   font-size: 3em;
+}
+.m-1 > * {
+   margin: 0;
+}
+.container > * {margin-bottom: 5em;}

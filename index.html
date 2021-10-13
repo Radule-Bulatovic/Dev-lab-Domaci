@@ -1,42 +1,95 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>My Home</title>
+   <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <div class="gr-8">
-        <img src="./images/Image@1X (2).png" alt="White chair and a teddy bear">
-        <div class="gr-8-grid">
-            <div></div>
-            <img src="./images/Image@1X.png" alt="Decorative ornaments" class="gr-8-img-medium">
-            <img src="./images/Image@1X (1).png" alt="Bookshelves" class="gr-8-img-small">
-            <div class="gr-8-bottom-div">
-                <div class="gr-8-yellow-area"></div>
-                <div class="gr-8-text-div">
-                    <h1 class="gr-8-title">24</h1>
-                    <div class="m-1">
-                        <p class="gr-8-subtitle">
-                            hours
-                        </p>
-                        <p>
-                            of extraordinary
-                            <br> discounts
-                        </p>
-                    </div>
-                </div>
+   <div class="container">
+      <section class="group-1">
+         <div class="header">
+            <h1 class="header__title">My home</h1>
+            <h2 class="header__subtitle">Solutions for every day</h2>
+         </div>
+         <div class="nav">
+            <ul class="nav-list-elements">
+               <li class="nav-list-element"><a href="">About</a></li>
+               <li class="nav-list-element"><a href="">Bedroom</a></li>
+               <li class="nav-list-element"><a href="">Living Room</a></li>
+               <li class="nav-list-element"><a href="">Kitchen</a></li>
+               <li class="nav-list-element"><a href="">Babies</a></li>
+               <li class="nav-list-element">|</li>
+               <li id="li-bold" class="nav-list-element">
+                  <a href="">The New</a>
+               </li>
+               <li id="li-bold" class="nav-list-element">
+                  <a href="">Contact</a>
+               </li>
+               <li id="li-bold" class="nav-list-element">
+                  <a href="">Membership</a>
+               </li>
+            </ul>
+            <input type="text" placeholder="SEARCH" />
+         </div>
+         <div class="group-1__pic">
+            <div>
+               <p class="group-1__pic-text">Free Shipping over $ 70</p>
+               <p class="group-1__pic-text">
+                  Disount in all our online store
+               </p>
             </div>
-        </div>
-    </div>
+            <div class="group-1__pic-image">
+               <div class="sign-up">
+                  <input type="email" placeholder="EMAIL" />
+                  <button type="submit" class="btn">SIGN UP</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+      <div class="gr-7">
+         <h1 class="gr-7__heading">
+            Open your gift table here. <br>
+            Gifts with direct delivery to your home
+         </h1>
+         <div class="gr-7__inner-div">
+            <input class="gr-7__input" type="text" placeholder="SELECT EVENT">
+            <input class="gr-7__input" type="text" placeholder="NAME">
+            <input class="gr-7__input" type="text" placeholder="EMAIL">
+            <button class="btn gr-7__button">SIGN UP</button>
+            <p class="gr-7__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eaque quisquam. Ipsa
+               molestias laborum distinctio non quaerat fugiat enim magnam corrupti. </p>
+         </div>
+      </div>
+
+      <div class="gr-8">
+         <img src="./images/Image@1X (2).png" alt="White chair and a teddy bear" class="gr-8__img-lg">
+         <div class="gr-8__grid">
+             <div></div>
+             <img src="./images/Image@1X.png" alt="Decorative ornaments" class="gr-8__img-medium">
+             <img src="./images/Image@1X (1).png" alt="Bookshelves" class="gr-8__img-small">
+             <div class="gr-8__bottom-div">
+                 <div class="gr-8__yellow-area"></div>
+                 <div class="gr-8__text-div">
+                     <h1 class="gr-8__title">24</h1>
+                     <div class="m-1">
+                         <p class="gr-8__subtitle">
+                             hours
+                         </p>
+                         <p>
+                             of extraordinary
+                             <br> discounts
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+   </div>
 </body>
 
 </html>
