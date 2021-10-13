@@ -357,3 +357,115 @@ body {
 .toggle .line-3 {
    transform: rotate(45deg) translate(-4px, -7px);
 }
+
+/* ============================GROUP 7=============================== */
+.gr-7 {
+   margin-top: 10vh;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%),url("./images/gr-7.png");
+   background-size: cover;
+   color: #cb9e61;
+   padding: 40vh 25vw 30vh 25vw;
+}
+
+.gr-7__heading {
+   position: absolute;
+   text-align: center;
+   top:0;
+}
+
+.gr-7__inner-div {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1em;
+   background-color: rgba(255,255,255,0.8);
+   padding: 3em;
+}
+
+.gr-7__button {
+   font-size: 1.2em;
+}
+
+.gr-7__input {
+   font-size: 0.7em;
+   padding: 1em;
+}
+
+.gr-7__text {
+   color: #929496;
+}
+
+/* ============================GROUP 8=============================== */
+
+.gr-8 {
+   display: flex;
+   flex-direction: row;
+   column-gap: 0.5em;
+   height: 100vh;
+   color: #CB9E61;
+   font-family: "Baskervville";
+   font-size: 1.3em;
+}
+
+.gr-8__img-lg {
+   width: 40vw;
+}
+
+.gr-8__grid {
+   display: grid;
+   grid-template-rows: 1.5fr 8.5fr 4fr 6fr;
+}
+
+.gr-8__img-medium {
+   border: 0.4em white solid;
+   border-radius: 0.5em;
+   margin: auto 0 0 -10vh;
+   height: 100%;
+   width: auto;
+   max-height: 37vh;
+}
+
+.gr-8__img-small {
+   max-height: 25vh;
+   margin: 0;
+   height: auto;
+   border-bottom: 0.5em white solid;
+}
+
+.gr-8__yellow-area {
+   background-color: #E0C39C;
+   width: 5vw;
+   height: 100%;
+}
+
+.gr-8__bottom-div {
+   display: inline-flex;
+}
+
+.gr-8__text-div {
+   margin-left: 10vh;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.gr-8__title {
+   font-family: "Baskerville BT Roman";
+   font-size: 6em;
+   margin: 0;
+}
+
+.m-1 {
+   margin-left: 1em;
+}
+
+.gr-8__subtitle {
+   font-size: 3em;
+}
+.m-1 > * {
+   margin: 0;
+}
+.container > * {margin-bottom: 5em;}
