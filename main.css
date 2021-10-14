@@ -17,6 +17,7 @@
    --gray: #8c8c8c;
    --dark-gray: rgb(47, 79, 79);
    --white: #FFF;
+   --beige: #DACCB6;
 }
 
 * {
@@ -70,7 +71,7 @@ body {
 }
 
 .header__subtitle {
-   color: #929496;
+   color: var(--gray);
    font-size: 1rem;
    padding-bottom: 1rem;
 }
@@ -169,15 +170,17 @@ body {
    margin-top: 0.5rem;
    padding: 0.3rem 0.7rem;
    font-family: inherit;
-   color: #ffffff;
+   color: var(--white);
    border: none;
    background-color: var(--dark-gold);
 }
 
 .btn:hover {
+   font-weight: bold;
    color: var(--dark-gold);
-   background-color: #ffffff;
+   background-color: var(--white);
    cursor: pointer;
+   transition: background-color ease-in 300ms;
 }
 
 .group-1__pic-image {
@@ -268,7 +271,7 @@ body {
    padding: 0.1rem 0.3rem;
    margin: 0;
    width: 100%;
-   color: #ffffff;
+   color: var(--white);
 }
 
 .card {
@@ -351,7 +354,7 @@ body {
 .sweet-home {
    grid-area: text-2;
    font-family: 'BlackJack';
-   color: #808183;
+   color: var(--gray);
 }
 
 .plant {
@@ -692,14 +695,14 @@ body {
 .gr-6__circle {
    width: 2em;
    height: 2em;
-   background-color: #DACCB6;
+   background-color: var(--beige);
    border-radius: 50%;
    border: white solid 3px;
    margin-bottom: 0.2em;
 }
 
 .gr-6__circle:nth-of-type(1) {
-   background-color: #CCA77C;
+   background-color: var(--gold);
 }
 .gr-6__circle:nth-of-type(3) {
    background-color: var(--gray);
@@ -724,7 +727,7 @@ body {
 }
 
 .gr-6__yellow-area {
-   background-color: #e0c39c;
+   background-color: var(--gold);
    height: 30%;
    width: 3vw;
    border: 0.2em solid white;
@@ -779,7 +782,7 @@ body {
 }
 
 .gr-7__text {
-   color: #929496;
+   color: var(--gray);
 }
 
 /* ============================GROUP 8=============================== */
@@ -820,7 +823,7 @@ body {
 }
 
 .gr-8__yellow-area {
-   background-color: #e0c39c;
+   background-color: var(--gold);
    width: 5vw;
    height: 100%;
 }
@@ -892,14 +895,6 @@ footer li {
    margin-bottom: 1em;
 }
 
-footer button {
-   background-color: var(--dark-gold);
-   color: var(--white);
-   font-family: inherit;
-   padding: 0.2em;
-   border: 0;
-}
-
 .footer__last-div {
    margin: auto 0;
 }
@@ -936,12 +931,4 @@ footer button {
 .footer__link:hover {
    color: var(--dark-gray);
    transition: color ease-in 300ms;
-}
-
-footer button:hover {
-   color: var(--dark-gold);
-   font-weight: bold;
-   background-color: var(--white);
-   cursor: pointer;
-   transition: background-color ease-in 300ms;
 }
