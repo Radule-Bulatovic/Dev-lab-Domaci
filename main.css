@@ -374,7 +374,7 @@ body {
    .group-2 {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 0.1fr repeat(10, 0.5fr) 0.1fr;
+      grid-template-rows: 0.1fr repeat(9, 0.5fr) 0.1fr;
       grid-template-areas:
          'title'
          'el-1'
@@ -419,6 +419,13 @@ body {
    .nav-burger-menu {
       display: block;
    }
+
+   #gr-4 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'group-4-text group-4-img';
+      margin-top: 3rem;
+      position: relative;
+   }
 }
 
 .nav-active {
@@ -435,6 +442,57 @@ body {
 
 .toggle .line-3 {
    transform: rotate(45deg) translate(-4px, -7px);
+}
+
+.group-4 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr;
+   grid-template-areas: '. group-4-text group-4-img';
+   margin-top: 3rem;
+   height: 90vh;
+   position: relative;
+}
+
+.group-4-img {
+   grid-area: group-4-img;
+   background-image: url(images/group-4-img.png);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.group-4-text > * {
+   width: 100%;
+}
+
+.group-4-text {
+   grid-area: group-4-text;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: right;
+}
+.group-4-text .footer__txt {
+   color: var(--gray);
+}
+
+.group-4-text .footer__txt span {
+   color: var(--dark-gold);
+   font-size: 1.2rem;
+}
+
+.group-4-back-img {
+   position: absolute;
+   background-image: url(images/back-pic-2.png);
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: cover;
+   height: 100%;
+   width: 100%;
+   z-index: -10;
+   left: -50%;
 }
 
 /* ============================GROUP 7=============================== */
@@ -558,11 +616,11 @@ body {
 
 /* ============================Footer=============================== */
 :root {
-   --gold: #E0C39C;
-   --dark-gold: #CB9E61;
+   --gold: #e0c39c;
+   --dark-gold: #cb9e61;
    --gray: #8c8c8c;
    --dark-gray: rgb(47, 79, 79);
-   --white: #FFF;
+   --white: #fff;
 }
 
 footer {
@@ -576,7 +634,7 @@ footer {
    grid-column-gap: 6em;
 }
 
-footer>div {
+footer > div {
    display: flex;
    flex-direction: column;
 }
