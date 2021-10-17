@@ -12,12 +12,12 @@
 }
 
 :root {
-   --gold: #E0C39C;
-   --dark-gold: #CB9E61;
+   --gold: #e0c39c;
+   --dark-gold: #cb9e61;
    --gray: #8c8c8c;
    --dark-gray: rgb(47, 79, 79);
-   --white: #FFF;
-   --beige: #DACCB6;
+   --white: #fff;
+   --beige: #daccb6;
 }
 
 * {
@@ -25,7 +25,7 @@
 }
 
 html {
-   font-size: 16px;
+   font-size: 18px;
 }
 
 body {
@@ -43,6 +43,10 @@ body {
    padding: 0 4rem;
    overflow-x: hidden;
    position: relative;
+}
+
+.home--page {
+   text-decoration: none;
 }
 
 .group-1 {
@@ -105,7 +109,8 @@ body {
    color: var(--gray);
 }
 
-.nav-list-element a:hover, .nav-list-element a:active {
+.nav-list-element a:hover,
+.nav-list-element a:active {
    color: var(--dark-gold);
 }
 
@@ -541,7 +546,7 @@ body {
    background-image: url(images/group-5-pic-3.png);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
    html {
       font-size: 12px;
    }
@@ -689,7 +694,7 @@ body {
    bottom: 0;
    margin-top: auto;
    margin-bottom: auto;
-   right: -.75em;
+   right: -0.75em;
 }
 
 .gr-6__circle {
@@ -752,7 +757,12 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   background-image: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%), url('./images/gr-7.png');
+   background-image: linear-gradient(
+         180deg,
+         rgba(255, 255, 255, 1) 0%,
+         rgba(255, 255, 255, 0) 50%
+      ),
+      url('./images/gr-7.png');
    background-size: cover;
    color: var(--dark-gold);
    padding: 40vh 25vw 30vh 25vw;
@@ -853,7 +863,7 @@ body {
    font-size: 3em;
 }
 
-.m-1>* {
+.m-1 > * {
    margin: 0;
 }
 
