@@ -11,7 +11,7 @@ const handleNavSlide = () => {
             link.style.animation = ''
          } else {
             link.style.animation = `showLinks 0.5s ease forwards ${
-               index / 7 + 0.3
+               index / 7 + 0.8
             }s`
          }
       })
