@@ -1,0 +1,120 @@
+.group-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.3fr;
+    grid-template-areas: 'header' 'nav';
+}
+
+.employee-div {
+    border-top: 0.2em var(--gray) solid;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.employee-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 7em;
+}
+
+.employee-div>div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+}
+
+.employee-description {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    border: solid var(--gold) 0.2em;
+    padding: 0 2em 2em 2em;
+    position: absolute;
+    left: -3em;
+    width: 90%;
+}
+
+.employee-description h2 {
+    position: relative;
+    font-size: 3em;
+}
+
+.employee-description h2::after {
+    font-size: 0.3em;
+    color: var(--gray);
+    position: absolute;
+    content: "CEO";
+    left: 0;
+    bottom: -1em;
+}
+
+.employee-description p {
+    display: none;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        display: block;
+    }
+}
+img:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+  }
+
+.employee-description:hover p {
+    display: block;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+.employee-card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.employee-card img {
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.emp-img {
+    position: absolute;
+    margin-right: 25%;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2em;
+    border-radius: 2em 2em 0 0 ;
+    bottom: 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.emp-img p{
+    /* display: none; */
+    height: 0;
+    opacity: 0;
+}
+
+
+.emp-img:hover p {
+    /* display: block; */
+    opacity: 1;
+    height: auto;
+
+    /* animation: fadeIn 1s; */
+    transition: height 1s 1s, opacity 600ms 0ms;
+    animation-fill-mode: forwards;
+}
