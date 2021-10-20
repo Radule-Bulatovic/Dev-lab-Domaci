@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="gallery.css" />
    </head>
    <body>
-      <div class="l-g"></div>
+      <div class="linear-gradient-top"></div>
       <div class="container">
          <section class="group-1">
             <div class="header">
@@ -31,7 +31,7 @@
                   <li class="nav-list-element"><a href="">Babies</a></li>
                   <li class="nav-list-element">|</li>
                   <li id="li-bold" class="nav-list-element">
-                     <a href="gallery.html">Gallery</a>
+                     <a href="gallery.html" id="active-link">Gallery</a>
                   </li>
                   <li id="li-bold" class="nav-list-element">
                      <a href="about.html">About us</a>
@@ -39,26 +39,32 @@
                </ul>
                <input type="text" placeholder="SEARCH" />
             </div>
-            <div class="three-js">
+            <div class="model-3D">
                <canvas id="webgl" height="500" width="500"></canvas>
+               <p class="model-3D--text">Your simple modern home starts here</p>
             </div>
             <div class="gallery">
-               <div class="gallery__layout">
-                  <h2 class="title">Gallery</h2>
-                  <div class="horizontal-scroll-wrapper squares" id="scroll">
-                     <div class="gallery-pic-1"></div>
-                     <div class="gallery-pic-2"></div>
-                     <div class="gallery-pic-3"></div>
-                     <div class="gallery-pic-4"></div>
-                     <div class="gallery-pic-5"></div>
-                     <div class="gallery-pic-6"></div>
-                     <div class="gallery-pic-7"></div>
-                     <div class="gallery-pic-8"></div>
-                     <div class="gallery-pic-9"></div>
-                  </div>
+               <h2 class="title">GALLERY</h2>
+               <div class="horizontal-scroll-wrapper squares" id="scroll">
+                  <div class="gallery-pic-1"></div>
+                  <div class="gallery-pic-2"></div>
+                  <div class="gallery-pic-3"></div>
+                  <div class="gallery-pic-4"></div>
+                  <div class="gallery-pic-5"></div>
+                  <div class="gallery-pic-6"></div>
+                  <div class="gallery-pic-7"></div>
+                  <div class="gallery-pic-8"></div>
+                  <div class="gallery-pic-9"></div>
                </div>
+               <span>scroll for more</span>
             </div>
          </section>
+
+         <section class="store-location">
+            <p>Feel the difference at</p>
+            <div id="mapdiv"></div>
+         </section>
+
          <footer>
             <div class="align-end">
                <ul>
@@ -96,8 +102,10 @@
             </div>
          </footer>
       </div>
-      <div class="l-g-2"></div>
+      <div class="linear-gradient-bottom"></div>
       <script src="../js/app.js"></script>
       <script src="../js/gallery.js" type="module"></script>
+      <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+      <script src="../js/mapLocation.js"></script>
    </body>
 </html>

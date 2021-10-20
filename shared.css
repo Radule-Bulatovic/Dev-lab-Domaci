@@ -94,6 +94,13 @@ body {
    padding: 0;
 }
 
+.nav input {
+   font-family: inherit;
+   padding: 0.2rem;
+   border-radius: 0.1rem;
+   border: 1px solid var(--gray);
+}
+
 .nav-list-element {
    display: inline-block;
    padding-right: 2.5rem;
