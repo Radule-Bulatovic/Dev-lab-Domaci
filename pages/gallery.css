@@ -1,20 +1,42 @@
 :root {
-   --gradient: linear-gradient(45deg, #a960ee, #ff333d, #90e0ff, #ffcb57);
+   --gradient: linear-gradient(
+      45deg,
+      #cc9a53,
+      var(--dark-gold),
+      var(--gold),
+      var(--beige)
+   );
 }
 
 body {
    margin: 0;
 }
 
-.l-g {
+.model-3D,
+.gallery,
+.store-location {
+   font-family: BlackJack;
+}
+
+.nav-list-element a:hover,
+.nav-list-element a:active {
+   color: var(--beige);
+}
+
+[class^='linear-gradient-'] {
    width: 100%;
-   height: 48%;
+   height: 80vh;
    background-image: var(--gradient);
    background-size: 140%;
    animation: bg-animation 3.5s infinite alternate;
    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%);
    position: absolute;
    z-index: -1;
+}
+
+.linear-gradient-top {
+   top: 0;
+   left: 0;
 }
 
 @keyframes bg-animation {
@@ -27,23 +49,24 @@ body {
 }
 
 .group-1 {
-   display: grid;
-   grid-template-columns: 0.9fr 1.5fr;
+   grid-template-columns: 0.4fr 1.6fr;
    grid-template-rows: 0.6fr 0.3fr 6fr;
    grid-template-areas: 'header header' 'nav nav' 'three-js gallery';
-   row-gap: 0.5rem;
-   position: relative;
-   height: 100vh;
+   height: 97vh;
+   column-gap: 1rem;
+   margin-bottom: 2rem;
 }
 
-.three-js {
+.model-3D {
    grid-area: three-js;
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
+   height: 100%;
 }
 
-canvas {
+#webgl {
    cursor: grab;
    outline: none;
    -webkit-user-select: none;
@@ -52,14 +75,38 @@ canvas {
    user-select: none;
 }
 
+.model-3D--text {
+   width: 100%;
+   position: absolute;
+   font-size: 2.2rem;
+   text-align: center;
+   color: var(--white);
+   font-weight: bold;
+   padding: 0.6rem 0.8rem;
+   background-color: #beb8b88a;
+   bottom: 0;
+   margin: 0;
+   border-radius: 0.4rem;
+}
+
 .gallery {
-   border-radius: 1rem;
-   height: 90%;
+   /* -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 80% 0);
+   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 80% 0); */
+   height: 100%;
    width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   background-color: #beb8b88a;
+   border-radius: 0.4rem;
+   overflow: hidden;
+   padding: 1rem;
+}
+
+.gallery h2 {
+   margin: 0 0 1rem 0;
+   padding: 0;
 }
 
 .gallery ::-webkit-scrollbar {
@@ -72,14 +119,17 @@ canvas {
    height: 0.1px;
 }
 
+.gallery span {
+   color: var(--dark-gold);
+}
+
 .horizontal-scroll-wrapper {
-   width: 85%;
-   height: 85%;
+   width: 90%;
+   height: 90%;
    display: block;
    overflow-y: auto;
    overflow-x: hidden;
    transform: rotate(-90deg);
-   border-radius: 1rem;
 }
 .horizontal-scroll-wrapper > div {
    display: block;
@@ -127,37 +177,22 @@ canvas {
    background-image: url(../images/pic-9.png);
 }
 
-.gallery__layout {
-   width: 80%;
-   height: 85%;
-   background-color: #90e0ff48;
-   margin: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   border-radius: 2rem;
-   padding: 1rem 1rem 2.5rem 1rem;
-   overflow: hidden;
+.store-location p {
+   color: var(--gray);
+   font-size: 2rem;
+   text-align: center;
+   margin-bottom: 0.1rem;
 }
 
-.gallery__layout h2 {
-   margin: 0 0 1rem 0;
-   padding: 0;
-}
-
-.l-g-2 {
-   width: 100%;
-   height: 48%;
-   background-image: var(--gradient);
-   background-size: 140%;
-   animation: bg-animation 3.5s infinite alternate;
-   clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%);
-   position: absolute;
+.linear-gradient-bottom {
    transform: rotateX(180deg);
    bottom: 0;
    right: 0;
    z-index: -1;
+}
+
+#active-link {
+   color: var(--dark-gold);
 }
 
 @media only screen and (max-width: 768px) {
@@ -165,22 +200,20 @@ canvas {
       grid-template-columns: 1fr;
       grid-template-rows: 0.6fr 0.3fr 3fr 3fr;
       grid-template-areas: 'header' 'nav' 'three-js' 'gallery';
-      row-gap: 0.5rem;
+      row-gap: 1.2rem;
       position: relative;
-      gap: 0;
+   }
+   .model-3D {
+      align-items: flex-start;
    }
    #webgl {
-      height: 250px !important;
-      width: 250px !important;
-   }
-   .gallery {
-      height: 100%;
+      height: 19rem !important;
+      width: 19rem !important;
    }
    #scroll {
       overflow-x: auto;
    }
-   .gallery__layout {
-      width: 100%;
-      height: 100%;
+   #mapdiv {
+      height: 40vh;
    }
 }
