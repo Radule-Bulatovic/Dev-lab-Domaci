@@ -1,4 +1,4 @@
-.group-1__pic {
+.group-1__hero-banner {
    grid-area: group-1-pic;
    text-align: center;
    display: grid;
@@ -6,7 +6,7 @@
    grid-template-rows: 0.1fr 2fr;
 }
 
-.group-1__pic-text {
+.group-1__hero-banner--text {
    display: inline-block;
    padding-right: 0.6rem;
    color: var(--dark-gold);
@@ -20,6 +20,10 @@
    flex-direction: column;
    bottom: 7%;
    right: 2%;
+}
+
+.email-input {
+   font-family: inherit;
 }
 
 .btn {
@@ -39,16 +43,13 @@
    transition: background-color ease-in 300ms;
 }
 
-.group-1__pic-image {
-   background-image: url('images/main-pic.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
+.group-1__hero-banner--image {
+   background: url('images/main-pic.png') center/cover no-repeat;
    position: relative;
    overflow: hidden;
 }
 
-.group-1__pic-image-texture {
+.group-1__hero-banner--image--texture {
    position: absolute;
    top: -10%;
    right: -20%;
@@ -57,7 +58,7 @@
 .group-2 {
    display: grid;
    grid-template-columns: repeat(10, 1fr);
-   grid-template-rows: 0.7fr 1.9fr 1.5fr 1.5fr 0.5fr;
+   grid-template-rows: 0.4fr 1.9fr 1.5fr 1.5fr 0.5fr;
    grid-template-areas:
       'title title title title title title title title title title'
       '. . el-1 el-1 el-2 el-2 el-3 el-3 . .'
@@ -153,9 +154,7 @@
 }
 
 .arrow {
-   background-image: url(images/arrow.png);
-   background-position: center;
-   background-repeat: no-repeat;
+   background: url(images/arrow.png) center no-repeat;
    position: absolute;
    top: 40%;
    right: 0;
@@ -163,11 +162,14 @@
    height: 20%;
 }
 
-.back-photo {
+.group-2__back-photo {
    position: absolute;
    z-index: -10;
    top: -5%;
-   right: -45%;
+   right: -25%;
+   background: url(images/back-pic-1.png) center/cover no-repeat;
+   width: 50vw;
+   height: 60vh;
 }
 
 .group-3 {
@@ -179,15 +181,20 @@
    margin-top: 1rem;
 }
 
-.kyla-pic {
+.group-3__image {
    grid-area: pic;
-   background-image: url(images/kyle-pic.png);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+   background: url(images/kyle-pic.png) center/cover no-repeat;
    position: relative;
 }
 
+.group-3__image--texture {
+   position: absolute;
+   width: 100%;
+   height: 25%;
+   left: 0;
+   top: 0;
+   transform: rotate(180deg);
+}
 .wrap-text {
    display: flex;
    justify-content: center;
@@ -235,18 +242,16 @@
    position: relative;
 }
 
-.group-4-img {
+.group-4_img {
    grid-area: group-4-img;
-   background-image: url(images/group-4-img.png);
-   background-repeat: no-repeat;
-   background-position: center;
+   background: url(images/group-4-img.png) center/cover no-repeat;
 }
 
-.group-4-text > * {
+.group-4__text > * {
    width: 100%;
 }
 
-.group-4-text {
+.group-4__text {
    grid-area: group-4-text;
    padding: 1rem;
    display: flex;
@@ -255,21 +260,18 @@
    align-items: center;
    text-align: right;
 }
-.group-4-text .footer__txt {
+.group-4__text .footer__txt {
    color: var(--gray);
 }
 
-.group-4-text .footer__txt span {
+.group-4__text .footer__txt span {
    color: var(--dark-gold);
    font-size: 1.2rem;
 }
 
-.group-4-back-img {
+.group-4__back-image {
    position: absolute;
-   background-image: url(images/back-pic-2.png);
-   background-repeat: no-repeat;
-   background-position: right;
-   background-size: cover;
+   background: url(images/back-pic-2.png) right/cover no-repeat;
    height: 100%;
    width: 100%;
    z-index: -10;
@@ -293,41 +295,42 @@
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 90%;
+   height: 100%;
    width: 100%;
 }
 
-.group-5__pic-2-img p {
+.group-5__el-2-img p {
    position: relative;
    z-index: 10;
 }
-.group-5__pic-1 {
+.group-5__el-1 {
    position: relative;
 }
 
-[class^='group-5__pic-2-img-'] {
+[class='group-5__back-img'] {
    position: absolute;
    background-size: cover;
 }
-.group-5__pic-2-img-texture {
-   background-image: url(images/pic-1-texture.png);
+
+.group-5__el-2-img-texture {
+   background: url(images/pic-1-texture.png) center/cover no-repeat;
    width: 100%;
    height: 60%;
    top: -9%;
    left: 0%;
    background-position: right;
+   position: absolute;
 }
 
-.group-5__pic-2-img-back {
-   background-position: center;
-   background-image: url(images/back-pic-1.png);
+.group-5__back-img {
+   background: url(images/back-pic-1.png) center;
    width: 100%;
    height: 70%;
    z-index: -1;
    right: -50%;
    bottom: 0;
 }
-.group-5__pic-1-back {
+.group-5__el-1-back {
    background-image: url(images/feather.png);
    background-repeat: no-repeat;
    background-size: contain;
@@ -339,9 +342,10 @@
    z-index: -1;
 }
 
-.g-5-t {
+.group-5_el-2-text {
+   color: var(--dark-gold);
    text-align: left;
-   font-size: 1.2rem;
+   font-size: 1.4rem;
    font-weight: bold;
    padding: 1rem;
 }
@@ -363,7 +367,7 @@
    justify-content: center;
 }
 
-.group-5__pic-1-rectangle {
+.group-5__el-1-rectangle {
    background-image: url(images/Rectangle@1X.png);
    position: absolute;
    background-size: contain;
@@ -371,53 +375,33 @@
    background-position: center;
    width: 50%;
    height: 10%;
-   top: -25;
+   top: -35;
    right: 0;
 }
 
-.group-5__pic-1 {
+.group-5__el-1 {
    grid-area: p-1;
 }
-.group-5__pic-2 {
+.group-5__el-2 {
    grid-area: p-2;
    position: relative;
    overflow: hidden;
 }
-.group-5__pic-3 {
+.group-5__el-3 {
    grid-area: p-3;
 }
 
-.group-5__pic-1-img {
+.group-5__el-1-img {
    background-image: url(images/group-5-pic-1.png);
 }
-.group-5__pic-2-img {
+.group-5__el-2-img {
    background-image: url(images/group-5-pic-2.png);
 }
-.group-5__pic-3-img {
+.group-5__el-3-img {
    background-image: url(images/group-5-pic-3.png);
 }
 
 @media only screen and (max-width: 768px) {
-   html {
-      font-size: 12px;
-   }
-   .nav-list-elements {
-      position: absolute;
-      left: 0;
-      width: 50vw;
-      height: 50vh;
-      top: 20%;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      z-index: 100;
-      transform: translateX(-200%);
-      transition: transform 0.6s ease-in;
-      border-radius: 1rem;
-      box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
-   }
    .group-2 {
       display: grid;
       grid-template-columns: 1fr;
@@ -436,6 +420,9 @@
          'end-text';
       row-gap: 1.5rem;
    }
+   .group-2__back-photo {
+      width: 200%;
+   }
    .group-3 {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 4fr 1fr 0.5fr;
@@ -453,13 +440,13 @@
    .side-text h2 {
       margin: 0.8rem;
    }
-   .nav-list-element {
+   .nav__list-element {
       padding: 0;
    }
-   .nav-list-elements li:nth-child(6) {
+   .nav__list-elements li:nth-child(6) {
       display: none;
    }
-   .nav-burger-menu {
+   .nav__burger-menu {
       display: block;
    }
 
@@ -482,22 +469,6 @@
    #gr-5-pic-3 {
       height: 100%;
    }
-}
-
-.nav-active {
-   transform: translateX(0%);
-}
-
-.toggle .line-1 {
-   transform: rotate(-45deg) translate(-1px, 4px);
-}
-
-.toggle .line-2 {
-   opacity: 0;
-}
-
-.toggle .line-3 {
-   transform: rotate(45deg) translate(-4px, -7px);
 }
 
 /* ============================GROUP 6=============================== */

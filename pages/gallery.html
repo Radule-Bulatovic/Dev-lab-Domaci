@@ -6,44 +6,65 @@
       <title>Gallery</title>
       <link rel="stylesheet" href="../shared.css" />
       <link rel="stylesheet" href="gallery.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      />
    </head>
    <body>
       <div class="linear-gradient-top"></div>
       <div class="container">
          <section class="group-1">
-            <div class="header">
-               <a href="../index.html" class="home--page">
+            <header class="header">
+               <a href="../index.html" class="home-page">
                   <h1 class="header__title">My home</h1>
-                  <h2 class="header__subtitle">Solutions for every day</h2>
                </a>
-            </div>
+               <h2 class="header__subtitle">Solutions for every day</h2>
+            </header>
             <div class="nav">
-               <div class="nav-burger-menu">
+               <div class="nav__burger-menu">
                   <div class="line-1"></div>
                   <div class="line-2"></div>
                   <div class="line-3"></div>
                </div>
-               <ul class="nav-list-elements">
-                  <li class="nav-list-element"><a href="">About</a></li>
-                  <li class="nav-list-element"><a href="">Bedroom</a></li>
-                  <li class="nav-list-element"><a href="">Living Room</a></li>
-                  <li class="nav-list-element"><a href="">Kitchen</a></li>
-                  <li class="nav-list-element"><a href="">Babies</a></li>
-                  <li class="nav-list-element">|</li>
-                  <li id="li-bold" class="nav-list-element">
-                     <a href="gallery.html" id="active-link">Gallery</a>
+               <ul class="nav__list-elements">
+                  <li class="nav__list-element"><a href="">About</a></li>
+                  <li class="nav__list-element"><a href="">Bedroom</a></li>
+                  <li class="nav__list-element"><a href="">Living Room</a></li>
+                  <li class="nav__list-element"><a href="">Kitchen</a></li>
+                  <li class="nav__list-element"><a href="">Babies</a></li>
+                  <li class="nav__list-element">|</li>
+                  <li id="li-bold" class="nav__list-element">
+                     <a href="" id="active-link">Gallery</a>
                   </li>
-                  <li id="li-bold" class="nav-list-element">
+                  <li id="li-bold" class="nav__list-element">
                      <a href="about.html">About us</a>
                   </li>
                </ul>
                <input type="text" placeholder="SEARCH" />
             </div>
+            <div class="gallery">
+               <div class="gallery__image-1"></div>
+               <div class="gallery__image-2"></div>
+               <div class="gallery__image-3"></div>
+               <div class="gallery__image-4"></div>
+               <div class="gallery__image-5"></div>
+               <div class="gallery__image-6"></div>
+               <div class="gallery__image-7"></div>
+               <div class="gallery__image-8"></div>
+               <div class="gallery__image-9"></div>
+               <div class="gallery__image-10"></div>
+               <div class="gallery__image-11"></div>
+               <div class="gallery__image-12"></div>
+            </div>
+         </section>
+
+         <section class="model-and-scroll-gallery">
             <div class="model-3D">
                <canvas id="webgl" height="500" width="500"></canvas>
                <p class="model-3D--text">Your simple modern home starts here</p>
             </div>
-            <div class="gallery">
+            <div class="scroll-gallery">
                <h2 class="title">GALLERY</h2>
                <div class="horizontal-scroll-wrapper squares" id="scroll">
                   <div class="gallery-pic-1"></div>
@@ -61,7 +82,10 @@
          </section>
 
          <section class="store-location">
-            <p>Feel the difference at</p>
+            <p>
+               Designing at its best
+               <i class="fas fa-arrow-down"></i>
+            </p>
             <div id="mapdiv"></div>
          </section>
 
