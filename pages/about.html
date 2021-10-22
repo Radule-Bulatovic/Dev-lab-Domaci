@@ -5,12 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>About us</title>
       <link rel="stylesheet" href="../shared.css" />
-      <link rel="stylesheet" href="../main.css" />
       <link rel="stylesheet" href="about.css" />
    </head>
 
    <body>
-      <img id="background-img-1" src="../images/back-pic-1.png" alt="" />
+      
       <img id="background-img-2" src="../images/back-pic-2.png" alt="" />
       <img id="background-img-3" src="../images/Texture@1X.png" alt="" />
       <div class="container">
@@ -46,7 +45,7 @@
          </section>
 
          <div class="about-div">
-            <img src="../images/gold.jpg" alt="" />
+            <img src="../images/gold.jpg" alt="" class="blur cover-img"/>
             <div class="about-text">
                <h2>ABOUT MY HOME</h2>
                <p>
@@ -202,26 +201,26 @@
          </div>
 
          <footer>
-            <div class="align-end">
-               <ul>
-                  <li><a href="#" class="footer__link">ABOUT</a></li>
-                  <li><a href="#" class="footer__link">BEDROOM</a></li>
-                  <li><a href="#" class="footer__link">LIVING ROOM</a></li>
-                  <li><a href="#" class="footer__link">KITCHEN</a></li>
-                  <li><a href="#" class="footer__link">BABIES</a></li>
+            <div class="footer-col">
+               <ul class="footer__link-list">
+                  <li class="footer__link"><a href="#">ABOUT</a></li>
+                  <li class="footer__link"><a href="#">BEDROOM</a></li>
+                  <li class="footer__link"><a href="#">LIVING ROOM</a></li>
+                  <li class="footer__link"><a href="#">KITCHEN</a></li>
+                  <li class="footer__link"><a href="#">BABIES</a></li>
                   <br />
-                  <li><a href="#" class="footer__link">THE NEW</a></li>
-                  <li><a href="#" class="footer__link">CONTACT</a></li>
-                  <li><a href="#" class="footer__link">MEMBERSHIP</a></li>
+                  <li class="footer__link"><a href="#">THE NEW</a></li>
+                  <li class="footer__link"><a href="#">CONTACT</a></li>
+                  <li class="footer__link"><a href="#">MEMBERSHIP</a></li>
                </ul>
             </div>
-            <div>
+            <div class="footer-col">
                <p class="footer__txt">
                   Do you want to receive news <br />
                   of promotions and new products? <br />
                   Sign up for our newsletter now <br />
                </p>
-               <input type="text" />
+               <input type="text" class="footer__input" />
                <button class="btn">SIGN UP</button>
                <br />
                <p class="footer__txt--sm">
@@ -231,7 +230,7 @@
                   nostrud exerci tation
                </p>
             </div>
-            <div class="footer__last-div">
+            <div class="footer-col">
                <p class="footer__slogan">SOLUTIONS FOR EVERY DAY</p>
                <p class="footer__title">MY HOME</p>
                <p class="fancy-font">Home sweet home</p>

@@ -1,8 +1,82 @@
+@keyframes backShadow {
+    from {
+        box-shadow: 0px 0px 0px var(--gray);
+    }
+    to {
+        box-shadow: 8px 16px 16px var(--gray);
+    }
+}
+
+@keyframes growCard {
+    to {
+        background-color: rgba(140, 140, 140, 1);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes ceoImage {
+    from {
+        box-shadow: 0 0 0 black;
+    }
+    to {
+        box-shadow: 1em 2em 2em black;
+        border-radius: 0;
+    }
+}
+
 .group-1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 0.3fr;
     grid-template-areas: 'header' 'nav';
+}
+
+.about-div {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 2em;
+    right: 50%;
+    transform: translateX(50%);
+    color: white;
+    font-family: 'Baskervville', 'MyriadPro-Regular';
+    text-shadow: 2px 2px black;
+}
+
+.about-text h2 {
+    letter-spacing: 0.2em;
+    margin-bottom: 2em;
+}
+
+.who-are-we {
+    margin: 1em 0 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    color: var(--dark-gold);
+    background-color: white;
+    border: 0.2em solid var(--gold);
 }
 
 .employee-div {
@@ -42,11 +116,12 @@
 .employee-description h2 {
     position: relative;
     font-size: 3em;
+    color: var(--gray);
 }
 
 .employee-description h2::after {
     font-size: 0.3em;
-    color: var(--gray);
+    color: var(--dark-gold);
     position: absolute;
     content: "CEO";
     left: 0;
@@ -56,34 +131,16 @@
 .employee-description p {
     display: none;
     opacity: 0;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        display: block;
-    }
-}
-
-
-
-@keyframes testAnim {
-    from {
-        box-shadow:  0 0 0 black;
-    }
-    to {
-        box-shadow: 1em 2em 2em black;
-        border-radius: 0;
-    }
+    color: var(--dark-gray);
 }
 
 .employee-div img:hover {
-    animation: testAnim 0.5s forwards;
+    animation: ceoImage 0.5s forwards;
     transform: scale(1.1);
     transition: transform 0.5s;
-  }
+}
 
-  .employee-div img:hover + div .employee-description p {
+.employee-div img:hover+div .employee-description p {
     display: block;
     animation: fadeIn 1s;
     animation-fill-mode: forwards;
@@ -101,45 +158,6 @@
     object-fit: contain;
 }
 
-.about-div {
-    width: 100%;
-    height: 50%;
-    position: relative;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-text {
-    width: 70%;
-    text-align: center;
-    position: absolute;
-    top: 2em;
-    right: 50%;
-    transform: translateX(50%);
-    color: white;
-    font-family: 'Baskervville', 'MyriadPro-Regular';
-    text-shadow: 2px 2px black;
-}
-
-.about-text h2 {
-    letter-spacing: 0.2em;
-    margin-bottom: 2em;
-}
-
-.who-are-we {
-    margin: 1em 0 1em 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    letter-spacing: 0.2em;
-    color: var(--gray);
-    text-shadow: 2px 2px black;
-}
 
 .team-div {
     display: grid;
@@ -161,7 +179,6 @@ img {
     background-color: rgba(140, 140, 140, 0.4);
     padding: 0.2em;
     margin: 1em 0;
-    /* color: var(--gold); */
 }
 
 .team-div__card p {
@@ -169,27 +186,15 @@ img {
     padding-top: 0;
 }
 
-@keyframes backShadow {
-    from{
-        box-shadow: 0px 0px 0px var(--gray);    
-    }
-    to {
-        box-shadow: 8px 16px 16px var(--gray);
-    }
+.team-div__card:hover {
+    animation: backShadow 0.5s, growCard 0.5s;
+    animation-fill-mode: forwards;
 }
 
-.team-div__card:hover {
-    transform: scale(1.02);
-    transition: transform 0.5s;
-    animation: backShadow 0.5s;
-    animation-fill-mode: forwards;
-  }
-
-#background-img-2,
-#background-img-3{
+#background-img-2, #background-img-3 {
     position: absolute;
     z-index: -1;
-    width: auto;
+    width: 100vw;
     height: auto;
     object-fit: cover;
     top: 13%;
@@ -197,13 +202,36 @@ img {
 
 #background-img-2 {
     top: 40%;
-    
 }
 
 #background-img-1 {
     display: none;
 }
 
-#active-link{
+#active-link {
     color: var(--dark-gold);
+}
+
+.blur {
+    filter: blur(0.125em);
+}
+
+@media only screen and (max-width: 600px) {
+    .cover-img {
+        content: url('http://www.bestinteriordesigners.eu/wp-content/uploads/2017/04/Interior-Design-Tips-100-Refined-Decorating-Ideas-That-Are-Pure-Gold-59.jpg')
+    }
+    .team-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #background-img-2, #background-img-3{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+    /* body {
+        background-color: black;
+    } */
 }
