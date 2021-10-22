@@ -44,7 +44,7 @@
 }
 
 .group-1__hero-banner--image {
-   background: url('images/main-pic.png') center/cover no-repeat;
+   background: url('../images/main-pic.png') center/cover no-repeat;
    position: relative;
    overflow: hidden;
 }
@@ -149,7 +149,7 @@
 }
 
 .arrow {
-   background: url(images/arrow.png) center no-repeat;
+   background: url(../images/arrow.png) center no-repeat;
    position: absolute;
    top: 40%;
    right: 0;
@@ -162,7 +162,7 @@
    z-index: -10;
    top: -5%;
    right: -25%;
-   background: url(images/back-pic-1.png) center/cover no-repeat;
+   background: url(../images/back-pic-1.png) center/cover no-repeat;
    width: 50vw;
    height: 60vh;
 }
@@ -178,7 +178,7 @@
 
 .group-3__image {
    grid-area: pic;
-   background: url(images/kyle-pic.png) center/cover no-repeat;
+   background: url(../images/kyle-pic.png) center/cover no-repeat;
    position: relative;
 }
 
@@ -218,7 +218,7 @@
 
 .plant {
    position: absolute;
-   background-image: url(images/plant.png);
+   background-image: url(../images/plant.png);
    background-repeat: no-repeat;
    background-position: center;
    background-size: contain;
@@ -240,7 +240,7 @@
 
 .group-4_img {
    grid-area: group-4-img;
-   background: url(images/group-4-img.png) center/cover no-repeat;
+   background: url(../images/group-4-img.png) center/cover no-repeat;
 }
 
 .group-4__text>* {
@@ -268,7 +268,7 @@
 
 .group-4__back-image {
    position: absolute;
-   background: url(images/back-pic-2.png) right/cover no-repeat;
+   background: url(../images/back-pic-2.png) right/cover no-repeat;
    height: 100%;
    width: 100%;
    z-index: -10;
@@ -309,7 +309,7 @@
 }
 
 .group-5__el-2-img-texture {
-   background: url(images/pic-1-texture.png) center/cover no-repeat;
+   background: url(../images/pic-1-texture.png) center/cover no-repeat;
    width: 100%;
    height: 60%;
    top: -9%;
@@ -319,7 +319,7 @@
 }
 
 .group-5__back-img {
-   background: url(images/back-pic-1.png) center;
+   background: url(../images/back-pic-1.png) center;
    width: 100%;
    height: 70%;
    z-index: -1;
@@ -328,7 +328,7 @@
 }
 
 .group-5__el-1-back {
-   background-image: url(images/feather.png);
+   background-image: url(../images/feather.png);
    background-repeat: no-repeat;
    background-size: contain;
    position: absolute;
@@ -365,7 +365,7 @@
 }
 
 .group-5__el-1-rectangle {
-   background-image: url(images/Rectangle@1X.png);
+   background-image: url(../images/Rectangle@1X.png);
    position: absolute;
    background-size: contain;
    background-repeat: no-repeat;
@@ -391,15 +391,15 @@
 }
 
 .group-5__el-1-img {
-   background-image: url(images/group-5-pic-1.png);
+   background-image: url(../images/group-5-pic-1.png);
 }
 
 .group-5__el-2-img {
-   background-image: url(images/group-5-pic-2.png);
+   background-image: url(../images/group-5-pic-2.png);
 }
 
 .group-5__el-3-img {
-   background-image: url(images/group-5-pic-3.png);
+   background-image: url(../images/group-5-pic-3.png);
 }
 
 /* ============================GROUP 6=============================== */
@@ -497,7 +497,7 @@
 
 .gr-6__shape {
    position: absolute;
-   background-image: url('./images/gr-6-texture.png');
+   background-image: url('./../images/gr-6-texture.png');
    background-size: cover;
    width: 30%;
    height: 30%;
@@ -514,7 +514,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   background-image: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%), url('./images/gr-7.png');
+   background-image: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%), url('./../images/gr-7.png');
    background-size: cover;
    color: var(--dark-gold);
    padding: 40vh 25vw 30vh 25vw;
