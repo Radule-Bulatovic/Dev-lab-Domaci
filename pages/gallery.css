@@ -50,9 +50,10 @@ body {
 
 .group-1 {
    grid-template-columns: 0.4fr 1.6fr;
-   grid-template-rows: 0.3fr 0.3fr 6fr;
+   grid-template-rows: 0.3fr 0.3fr auto;
    grid-template-areas: 'header header' 'nav nav' 'gallery gallery';
    column-gap: 1rem;
+   margin-bottom: 1.5rem;
 }
 
 .gallery {
@@ -142,8 +143,9 @@ body {
    display: grid;
    grid-template-columns: 0.4fr 1.6fr;
    gap: 1rem;
-   height: 60vh;
+   height: auto;
    grid-template-areas: 'three-js scroll-gallery';
+   margin-bottom: 1.5rem;
 }
 
 .model-3D {
@@ -179,8 +181,6 @@ body {
 }
 
 .scroll-gallery {
-   /* -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 80% 0);
-   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 80% 0); */
    grid-area: scroll-gallery;
    height: 100%;
    width: 100%;
@@ -199,6 +199,12 @@ body {
    padding: 0;
 }
 
+.scroll-gallery {
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   scrollbar-color: #e3e3e3 transparent;
+}
+
 .scroll-gallery ::-webkit-scrollbar {
    width: 0.1px;
    height: 0.1px;
@@ -211,6 +217,7 @@ body {
 
 .scroll-gallery span {
    color: var(--dark-gold);
+   padding: 0.5rem;
 }
 
 .horizontal-scroll-wrapper {
