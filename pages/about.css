@@ -218,7 +218,7 @@ img {
 
 @media only screen and (max-width: 600px) {
     .cover-img {
-        content: url('http://www.bestinteriordesigners.eu/wp-content/uploads/2017/04/Interior-Design-Tips-100-Refined-Decorating-Ideas-That-Are-Pure-Gold-59.jpg')
+        content: url('../images/int-design.jpg')
     }
     .team-div {
         display: flex;
@@ -228,10 +228,34 @@ img {
     #background-img-2, #background-img-3{
         display: none;
     }
-}
+    .employee-div img {
+        border-radius: 0;
+    }
 
-@media only screen and (max-width: 768px) and (min-width: 600px) {
-    /* body {
-        background-color: black;
-    } */
+    .employee-description {
+        text-align: unset;  
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        border: solid var(--gold) 0.2em;
+        padding: 0 2em 2em 2em;
+        position: unset;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .employee-description h2 {
+        font-size: 2em;
+    }
+
+    .employee-description p {
+        display: unset;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+        opacity: 1;
+        color: var(--dark-gray);
+        font-size: 0.7em;
+    }
 }
